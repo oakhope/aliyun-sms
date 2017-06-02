@@ -1,7 +1,7 @@
 AliyunSMS
 ---------
 
-阿里云短信发送
+阿里云短信发送sdk封装
 
 ## 更新记录
 
@@ -16,8 +16,9 @@ composer require oakhope/aliyun-sms
 ### 使用
 
 ```php
-use Oakhope\AliyunSMS;
+$aliyunSms = new \Oakhope\AliyunSMS('accessId', 'accessKey', 'endPoint', 'topicName', 'signName');
 
+$aliyunSms->sendOne('templateCode', 'phone', ['paramA' => 'valueA', 'paramB' => 'valueB']);
 ```
 
 ## License
