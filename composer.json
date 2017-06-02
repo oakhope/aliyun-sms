@@ -1,0 +1,22 @@
+{
+  "name": "oakhope/aliyun-sms",
+  "type": "library",
+  "description": "阿里云短信发送",
+  "keywords": ["AliyunSMS", "aliyun", "SMS"],
+  "homepage": "https://github.com/oakhope/aliyun-sms",
+  "license": "MIT",
+  "require": {
+    "php": ">=7.0.0"
+  },
+  "authors": [
+    {
+      "name": "Benji Wang",
+      "email": "oak.hope@gmail.com"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "src/AliyunSMS.php"
+    ]
+  }
+}
