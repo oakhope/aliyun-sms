@@ -62,6 +62,14 @@ class AliyunSMS
         $batchSmsAttributes = new BatchSmsAttributes($this->signName, $templateCode);
         // 3.2 （如果在短信模板中定义了参数）指定短信模板中对应参数的值
 
+        // 参数转为string避免报错
+        $templateParam = array_map(
+            function ($value) {
+                return strval($value);
+            },
+            $templateParam
+        );
+
         $batchSmsAttributes->addReceiver($phone, $templateParam);
 
         $messageAttributes = new MessageAttributes(array($batchSmsAttributes));
