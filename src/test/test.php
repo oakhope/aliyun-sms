@@ -5,7 +5,7 @@
  * Time: 下午9:10
  */
 
-require_once(dirname(dirname(__FILE__)).'/AliyunSMS.php');
+require_once(__DIR__.'/../../vendor/autoload.php');
 
 // edit aliyun-mns-config.ini first
 $ini_array = parse_ini_file(__DIR__ . "/aliyun-mns-config.ini");
