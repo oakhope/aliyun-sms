@@ -107,4 +107,4 @@ spl_autoload_register(function ($class) use ($mapping) {
     }
 }, true);
 
-require __DIR__.'/vendor/autoload.php';
+require __DIR__.'/../../vendor/autoload.php';

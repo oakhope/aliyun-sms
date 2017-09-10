@@ -1,6 +1,0 @@
-{
-    "require": {
-        "guzzlehttp/guzzle": "^6.2",
-        "psr/http-message": "^1.0"
-    }
-}

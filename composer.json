@@ -6,7 +6,9 @@
   "homepage": "https://github.com/oakhope/aliyun-sms",
   "license": "MIT",
   "require": {
-    "php": ">=5.6.0"
+    "php": ">=5.6.0",
+    "guzzlehttp/guzzle": "*",
+    "psr/http-message": "*"
   },
   "authors": [
     {
