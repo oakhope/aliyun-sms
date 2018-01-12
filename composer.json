@@ -6,9 +6,7 @@
   "homepage": "https://github.com/oakhope/aliyun-sms",
   "license": "MIT",
   "require": {
-    "php": ">=5.6.0",
-    "guzzlehttp/guzzle": "*",
-    "psr/http-message": "*"
+    "php": ">=5.6.0"
   },
   "authors": [
     {
@@ -19,6 +17,10 @@
   "autoload": {
     "files": [
       "src/AliyunSMS.php"
-    ]
+    ],
+    "psr-4": {
+      "Aliyun\\": "src/api_sdk/lib/",
+      "Aliyun\\Test\\": "src/api_sdk/tests/"
+    }
   }
 }
