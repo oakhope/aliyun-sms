@@ -20,7 +20,7 @@ composer require oakhope/aliyun-sms
 ### 使用
 
 
-#### v2.0.0 (待发布)
+#### v2.0.0
 ```php
 $aliyunSms = new \Oakhope\AliyunSMS('accessId', 'accessKey', 'signName');
 
