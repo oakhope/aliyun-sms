@@ -17,6 +17,11 @@ $signName = $ini_array["signName"];
 $templateCode = $ini_array["templateCode"];
 $phone = $ini_array["phone"];
 
-$aliyunSms = new \Oakhope\AliyunSMS($accessId, $accessKey, $endPoint, $topicName, $signName);
 
-var_dump($aliyunSms->sendOne($templateCode, $phone, ['code' => '123123', 'product' => 'appname']));
+// v1.*
+//$aliyunSms = new \Oakhope\AliyunSMS($accessId, $accessKey, $endPoint, $topicName, $signName);
+//var_dump($aliyunSms->sendOne($templateCode, $phone, ['code' => '123123', 'product' => 'appname']));
+
+// v2.*
+$aliyunSms = new \Oakhope\AliyunSMS($accessId, $accessKey, $signName);
+var_dump($aliyunSms->sendOne($templateCode, $phone, '123123', 'product_name'));
