@@ -22,15 +22,11 @@ class AliyunSMS
      * AliyunSMS constructor.
      * @param $accessId
      * @param $accessKey
-     * @param string $endPoint @deprecated v2.0.0
-     * @param string $topicName @deprecated v2.0.0
      * @param $signName
      */
     public function __construct(
         $accessId,
         $accessKey,
-        $endPoint = 'deprecated',
-        $topicName = 'deprecated',
         $signName
     ) {
         $this->accessId = $accessId;
@@ -41,8 +37,8 @@ class AliyunSMS
     /**
      * @param $templateCode
      * @param $phoneNumbers
-     * @param array $templateParam
-     * @param string $messageBody @deprecated v2.0.0
+     * @param $code
+     * @param $product
      * @param string $outId 可选，设置流水号
      * @param string $smsUpExtendCode 选填，上行短信扩展码（扩展码字段控制在7位或以下，无特殊需求用户请忽略此字段）
      * @return mixed
@@ -57,17 +53,9 @@ class AliyunSMS
             string(2) "OK"
         }
      */
-    public function sendOne($templateCode, $phoneNumbers, array $templateParam = ['' => ''], $messageBody = null,  $outId = null, $smsUpExtendCode = null) {
+    public function sendOne($templateCode, $phoneNumbers, $code, $product, $outId = null, $smsUpExtendCode = null) {
 
-        // 参数转为string避免报错
-        $templateParam = array_map(
-            function ($value) {
-                return (string)$value;
-            },
-            $templateParam
-        );
-
-        return $this->sendSms($phoneNumbers, $this->signName, $templateCode, $templateParam['code'], $templateParam['product'], $outId, $smsUpExtendCode);
+        return $this->sendSms($phoneNumbers, $this->signName, $templateCode, $code, $product, $outId, $smsUpExtendCode);
     }
 
     /**
